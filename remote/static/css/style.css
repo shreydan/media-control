@@ -5,13 +5,21 @@ body, html {
     display: grid;
     place-items: center;
     font-family:Arial, Helvetica, sans-serif;
+    font-size: 1em;
 }
 * {
     box-sizing: border-box;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 button {
     border: none;
     cursor: pointer;
+    transition-duration: 0.2s;
+}
+button:active {
+    transform: scale(0.9);
+    transition-duration: 0.2s;
 }
 .fas {
     color: white;
@@ -23,7 +31,7 @@ button {
     flex-direction: column;
 
     height: 90%;
-    aspect-ratio: 9/18;
+    aspect-ratio: 9/16;
 }
 
 .mode {
@@ -52,7 +60,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 80%;
+    width: 90%;
     margin: 2% 0;
 }
 .main-controls * {
@@ -70,11 +78,11 @@ button {
     aspect-ratio: 1;
     border-radius: 1.5rem;
     background-color: #EB8282;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .playlist-controls {
-    width: 80%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,11 +95,14 @@ button {
     padding: 1rem 1.5rem;
 }
 
+/* #youtube-mode-active {
+    display: none;
+} */
 
 .youtube-controls {
-    flex: 1;
+    flex: 2;
     display: flex;
-    width: 80%;
+    width: 90%;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -101,6 +112,7 @@ button {
     aspect-ratio: 1;
     background-color: #c4c4c4;
     border-radius: 50%;
+    margin: 1%;
 }
 
 
