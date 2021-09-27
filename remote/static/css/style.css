@@ -1,0 +1,118 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: #F2F2F2;
+    display: grid;
+    place-items: center;
+    font-family:Arial, Helvetica, sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+button {
+    border: none;
+    cursor: pointer;
+}
+.fas {
+    color: white;
+}
+
+.remote-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    height: 90%;
+    aspect-ratio: 9/18;
+}
+
+.mode {
+    flex:2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.mode #mode-text {
+    color: #898989;
+    font-size: 0.8rem;
+    padding-bottom: 0.5em;
+}
+.mode #mode-change-button {
+    font-size: 1em;
+    color: white;
+    background-color: #EB8282;
+    padding: 0.5em 1.5em;
+    border-radius: 50px;
+    transition-duration: 0.2s;
+}
+
+
+.main-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 2% 0;
+}
+.main-controls * {
+    margin: 2%;
+}
+.main-controls .volume-button {
+    width: 3.5rem;
+    aspect-ratio: 1;
+    background-color: #DDDDDD;
+    border-radius: 50%;
+}
+.main-controls #play-pause {
+    flex: 1;
+    width: 7rem;
+    aspect-ratio: 1;
+    border-radius: 1.5rem;
+    background-color: #EB8282;
+    font-size: 1.5rem;
+}
+
+.playlist-controls {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.playlist-controls .playlist-button {
+    margin: 0 2%;
+    flex: 1;
+    background-color: #c4c4c4;
+    border-radius: 1.5rem;
+    padding: 1rem 1.5rem;
+}
+
+
+.youtube-controls {
+    flex: 1;
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.youtube-controls .youtube-control-button {
+    height: 3.5rem;
+    width: 3.5rem;
+    aspect-ratio: 1;
+    background-color: #c4c4c4;
+    border-radius: 50%;
+}
+
+
+.logo-container {   
+    flex: 2;
+    display: flex;
+    align-items: flex-end;
+}
+.logo {
+    border-radius: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    background-color: #bdbdbd;
+    color: white;
+    text-decoration: none;
+}
