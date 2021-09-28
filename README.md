@@ -27,7 +27,7 @@ Run `python media-control.py` and open `http://[host_address]:[port]` provided i
 ![universal remote screenshot](./screenshots/universal-remote.png)
 
 - Play/Pause and playing media
-- Go to next/previous media in qeueu
+- Go to next/previous media in queue
 - Control Device volume
 
 
