@@ -9,19 +9,12 @@ app = Flask(__name__, template_folder="remote", static_folder="remote/static")
 def remote():
     return render_template("index.html")
 
-# @app.route("/test/")
-# def test():
-#     return jsonify(
-#         response= 200,
-#         value= f'you sent me this: {request.args.get("command")}'
-#     )
-
 
 @app.route('/control/', methods=['POST'])
 def send_command_to_keyboard():
     data = request.get_json()
-    control(data['button_id'])
-    return jsonify(damn = 'damn')
+    control(mode = data['mode'], key = data['button_id'])
+    return jsonify(key = data['button_id'])
     
 
 
