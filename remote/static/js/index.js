@@ -1,4 +1,6 @@
-console.log("damn");
+console.log("remote is active on network");
+console.log('Issues/Help: https://github.com/shreydan/media-control');
+
 // definition of all buttons of the remote control
 const mode_change_button = document.getElementById("mode_change_button");
 
@@ -35,6 +37,9 @@ const youtube_controls = document.getElementById('youtube-mode-active');
 
 
 function toggle_remote_mode() {
+
+  // switch betwen normal and youtube control mode + required CSS changes
+
   if (mode === 'YOUTUBE') {
     mode = 'NORMAL';
     youtube_controls.style.visibility = 'hidden';
@@ -84,5 +89,6 @@ function send_remote_button(button) {
     body: JSON.stringify(data),
   })
     .then((response) => response.json())
-    .then((data) => console.log(data));
+    .then((data) => console.log(data))
+    .catch((error) => console.error(error));
 }

@@ -5,11 +5,12 @@ from controller import control
 app = Flask(__name__, template_folder="remote", static_folder="remote/static")
 
 
+# remote
 @app.route("/")
 def remote():
     return render_template("index.html")
 
-
+# API endpoint for remote control 
 @app.route('/control/', methods=['POST'])
 def send_command_to_keyboard():
     data = request.get_json()
@@ -18,5 +19,19 @@ def send_command_to_keyboard():
     
 
 
+"""
+flask is running on all addresses
+in your current network.
+Default host address = 0.0.0.0
+Default port = 5000
+
+-> Check firewall if port 5000 is allowed or not.
+-> Change host to the local IP address of the device
+   you want to control.
+-> There is currently no security over this connection,
+   avoid using in a public network.
+
+"""
+
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0')
+    app.run(host='0.0.0.0', port=5000)
