@@ -33,8 +33,10 @@ Run `python media-control.py` and open `http://[host_address]:[port]` provided i
 
 ### Working
 
-`Flask` app `media-control.py` serves a remote UI in `/` with `/control` as the API endpoint for POST requests made by `index.js`
+[media-control.py](./media-control.py) `Flask` app serves a remote UI in `/` with `/control` as the API endpoint for POST requests made by `index.js`
+
 [index.js](./remote/static/js/index.js) sends POST requests to the API using fetch with the button id and mode.
+
 [controller.py](./controller.py) presses the right key/key-combination to control the host device using `pynput` package. 
 
 ## Server Details
