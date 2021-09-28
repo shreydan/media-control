@@ -46,7 +46,7 @@ button:active {
     font-size: 0.8rem;
     padding-bottom: 0.5em;
 }
-.mode #mode-change-button {
+.mode #mode_change_button {
     font-size: 1em;
     color: white;
     background-color: #EB8282;
@@ -72,7 +72,7 @@ button:active {
     background-color: #DDDDDD;
     border-radius: 50%;
 }
-.main-controls #play-pause {
+.main-controls #play_pause {
     flex: 1;
     width: 7rem;
     aspect-ratio: 1;
