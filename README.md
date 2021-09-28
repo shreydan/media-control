@@ -8,7 +8,8 @@ Control Youtube, streaming sites, media players on your computer using your phon
 
 ### Usage
 
-Run `python media-control.py` and open `http://[host_address]:[port]` provided in the terminal on your phone.
+- Run `python media-control.py` and open `http://[host_address]:[port]` provided in the terminal, on your phone.
+- Make sure the window playing the media is active.
 
 
 ## Features
