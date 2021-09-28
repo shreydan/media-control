@@ -27,22 +27,23 @@ const buttons = [
   yt_fullscreen,
   yt_captions,
   yt_rewind,
-  yt_forward,
+  yt_forward
 ];
 
 
 // add event listener to each button
-for (button of buttons) {
-  button.addEventListener("click", () => {
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
     console.log(button);
-    send_remote_button(button);
+    send_remote_button(button)
   });
-}
+})
 
 function send_remote_button(button) {
 
   // do a POST request when button is pressed to /control endpoint
-
+  
   const data = {
     button_id: button.id,
   };

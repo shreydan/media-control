@@ -8,11 +8,12 @@ youtube_commands = {
     'yt_forward': 'l',
     'yt_rewind': 'j',
     'yt_captions': 'c',
-    'yt_fullscreen': 'f'
+    'yt_fullscreen': 'f',
+    'playlist_previous': 'p',
+    'playlist_next': 'n'
 }
 
 def control(key):
-    print(key, youtube_commands.keys())
     if key in youtube_commands.keys():
-        print(key)
-        keyboard.type(youtube_commands[key])
+        with keyboard.pressed(Key.shift):
+            keyboard.type(youtube_commands[key])
