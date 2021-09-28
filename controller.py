@@ -1,6 +1,8 @@
 from pynput.keyboard import Key, Controller
 keyboard = Controller()
 
+
+# key for each button ID in universal remote mode
 media_commands = {
     'play_pause': Key.media_play_pause,
     'volume_down': Key.media_volume_down,
@@ -9,7 +11,7 @@ media_commands = {
     'playlist_next': Key.media_next
 }
 
-
+# key/key-combinations for each button ID in youtube remote mode
 youtube_commands = {
     'shortcuts': {
         'play_pause': 'k',
@@ -29,6 +31,13 @@ youtube_commands = {
 }
 
 def control(mode, key):
+
+    """
+    args:
+    mode: 'YOUTUBE' or 'NORMAL'
+    key: button_id which maps to its corresponding pynput Key
+    """
+
     if mode == 'YOUTUBE':
 
         if key in youtube_commands['shortcuts'].keys():

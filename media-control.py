@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, render_template, request
 from controller import control
 
-
+# initializing app
 app = Flask(__name__, template_folder="remote", static_folder="remote/static")
 
 

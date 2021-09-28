@@ -57,6 +57,9 @@ you want to control.
 avoid using in a public network.
 
 
+#### Tested on Linux
+#### Yet to test: Windows, MacOS
+
 ### Todo:
 
 - Authentication
